@@ -1,0 +1,85 @@
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <script>
+            function togglehideshow(element) {
+                 element.style.opacity= element.style.opacity * -1; 
+            }
+            
+            function hideall() {
+            	var elems = document.getElementsByTagName('img');
+                for (var i = 0; i < elems.length; i++) {
+                    elems[i].style.opacity = -1;
+                }
+            }
+            
+            function showall() {
+            	var elems = document.getElementsByTagName('img');
+                for (var i = 0; i < elems.length; i++) {
+                    elems[i].style.opacity = 1;
+                }
+            }
+            
+        </script>
+        <style>
+        button {
+        background-color: #43b17d; /* Green */
+        border: none;
+        padding: 20px;
+        width: 48%;
+        margin: 1%;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 12px;
+      	}
+        #barcodes {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+        }
+        
+        img {
+        opacity: 1
+        }
+
+        #barcodes td, #barcodes th {
+        border: 1px solid #ddd;
+        padding: 8px;
+        }
+
+        #barcodes tr:nth-child(even){
+        background-color: #f2f2f2;}
+
+        #barcodes tr:hover {background-color: #ddd;}
+
+        #barcodes th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        vertical-align: top;
+        text-align: center;
+        background-color: #04AA6D;
+        color: white;
+        }
+        </style>
+        </head>
+        <body>
+            <h1> Non used barcodes </h1>
+            <table id="barcodes">
+            <tr> <th>Item number</th> <th>Store</th>  <th>Order date</th>   <th>Barcode number</th>   <th>Barcode image</br><button onclick="showall()">Show all</button><button onclick="hideall()">Hide all</button></th>   <th>Amount</th>   <th>Expiration date</th>
+            
+    <tr>  <td>0</td>  <td>שופרסל - כלל ארצי</td>   <td>30.04.23</td>   <td>9147-8034-8192-3858-7419</td>   <td style="text-align:center;"><img onclick="togglehideshow(this)" src='https://cdn.10bis.co.il/gov-voucher-image/Vouchers_Supersal_91478034819238587419_8659f71e-2781-4dc8-90b9-b610c1724aea.png'></td>   <td>50</td>   <td>31/12/2025</br></br></td></tr>
+    
+    <tr>  <td>1</td>  <td>שופרסל - כלל ארצי</td>   <td>30.04.23</td>   <td>9147-8036-6542-6648-7419</td>   <td style="text-align:center;"><img onclick="togglehideshow(this)" src='https://cdn.10bis.co.il/gov-voucher-image/Vouchers_Supersal_91478036654266487419_5588e963-8a46-4cd1-85a9-751501b25930.png'></td>   <td>50</td>   <td>31/12/2025</br></br></td></tr>
+    
+    <tr>  <td>2</td>  <td>שופרסל - כלל ארצי</td>   <td>30.11.22</td>   <td>9147-8074-2773-5518-7419</td>   <td style="text-align:center;"><img onclick="togglehideshow(this)" src='https://cdn.10bis.co.il/gov-voucher-image/Vouchers_Supersal_91478074277355187419_f9ae3498-90a2-4e57-9094-8bb2e191d507.png'></td>   <td>50</td>   <td>31/12/2025</br></br></td></tr>
+    
+    <tr>  <td>3</td>  <td>שופרסל - כלל ארצי</td>   <td>26.01.22</td>   <td>9147-7067-8020-9877-7419</td>   <td style="text-align:center;"><img onclick="togglehideshow(this)" src='https://cdn.10bis.co.il/gov-voucher-image/Vouchers_Supersal_91477067802098777419_5e2d2fde-849f-4a89-8c3a-42c498fdea89.png'></td>   <td>40</td>   <td>31/12/2025</br></br></td></tr>
+    
+            </table>
+        </body>
+        </html>
+    
